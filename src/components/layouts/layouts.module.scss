@@ -8,28 +8,29 @@
   display: grid;
   grid-template-columns: to-rem(60) 1fr;
   grid-template-areas: "strip content";
+  gap: 0;
   transition: all 0.2s ease-in-out;
   width: 100%;
   @include md() {
     grid-template-columns: to-rem(100) 1fr;
   }
-  &__NameStrip {
-    &__Wrapper {
-      grid-area: strip;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      position: fixed;
-      height: 100vh;
-    }
 
+  &__NameStrip__Wrapper {
+    grid-area: strip;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: auto;
+  }
+  &__NameStrip {
     font-size: to-rem(36);
     -webkit-text-stroke-color: $theme-blue;
     -webkit-text-stroke-width: to-rem(1);
     color: transparent;
     white-space: nowrap;
     writing-mode: vertical-lr;
+    margin: auto;
     @include md() {
       font-size: to-rem(48);
     }
