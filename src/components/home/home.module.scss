@@ -1,0 +1,105 @@
+@import "../../styles/breakpoint";
+@import "../../styles/converter";
+@import "../../styles/variables";
+
+.heroCaption {
+  width: 100%;
+  margin-top: to-rem(120);
+  max-width: to-rem(700);
+
+  @include md() {
+    margin-top: to-rem(170);
+  }
+
+  &_title {
+    font-size: to-rem(48);
+    line-height: to-rem(64);
+  }
+
+  &_description {
+    margin-top: to-rem(21);
+    font-size: to-rem(18);
+  }
+
+  &_socialIcons {
+    margin-top: to-rem(46);
+    display: flex;
+    align-items: center;
+
+    a {
+      &:not(:first-child) {
+        margin-left: to-rem(30);
+      }
+
+      svg {
+        width: to-rem(30);
+        height: to-rem(30);
+      }
+    }
+  }
+}
+
+.navMenu {
+  margin-top: to-rem(88);
+  @include md() {
+    margin-top: to-rem(170);
+  }
+  &_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    border: 1px solid $theme-blue-light;
+    @include md() {
+      flex-direction: row;
+      height: to-rem(56);
+    }
+
+    a {
+      width: 100%;
+      height: to-rem(50);
+      display: flex;
+      align-items: center;
+      font-size: to-rem(18);
+      padding-left: to-rem(20);
+      background-color: $bg-cream;
+
+      &:not(:first-child) {
+        border-top: 1px solid $theme-blue-light;
+      }
+
+      @include md() {
+        width: 25%;
+        height: 100%;
+        &:not(:first-child) {
+          border-left: 1px solid $theme-blue-light;
+          border-top: 0;
+        }
+      }
+
+      &:hover {
+        background-color: $theme-blue;
+        color: $white;
+        border: 2px solid $bg-cream;
+      }
+      cursor: pointer;
+    }
+  }
+  hr {
+    position: absolute;
+    border-color: $theme-blue-light;
+    left: 0;
+    top: 50;
+    width: 100%;
+    margin-top: to-rem(-100);
+    z-index: -1;
+    @include md() {
+      margin-top: to-rem(-28);
+    }
+  }
+}
+
+.announcement {
+  margin-top: to-rem(57);
+}

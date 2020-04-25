@@ -1,6 +1,6 @@
 // Theme colors
 $theme-blue: #344678;
-$theme-blue-light: #daecff;
+$theme-blue-light: rgba(52, 70, 120, 0.2);
 $theme-red: #eb5757;
 // General colors
 $white: #ffffff;
@@ -11,3 +11,5 @@ $light-grey: #949495;
 $blue-to-purple: linear-gradient(90deg, #61dafb 0%, #b06ab3 100%);
 $light-blue: #61dafb;
 $light-purple: #b06ab3;
+
+$bg-cream: #f6f4ec;

@@ -2,28 +2,32 @@
 @import "../../styles/converter";
 @import "../../styles/breakpoint";
 
-.homeLayout {
+.pageLayout {
   height: 100vh;
-  background: url("../../assets/images/background.png") no-repeat center;
-  display: grid;
-  grid-template-columns: to-rem(60) 1fr;
-  grid-template-areas: "strip content";
-  gap: 0;
   transition: all 0.2s ease-in-out;
   width: 100%;
   @include md() {
-    grid-template-columns: to-rem(100) 1fr;
+    display: grid;
+    grid-template-areas: "strip content";
+    gap: 0;
+    grid-template-columns: to-rem(120) 1fr;
   }
 
-  &__NameStrip__Wrapper {
+  &_NameStrip_Wrapper {
     grid-area: strip;
     display: flex;
     align-items: center;
     position: fixed;
     height: 100vh;
-    width: auto;
+    width: to-rem(0);
+    z-index: -1;
+    border-right: 1px solid $theme-blue-light;
+    @include md() {
+      width: 120px;
+    }
   }
-  &__NameStrip {
+
+  &_NameStrip {
     font-size: to-rem(36);
     -webkit-text-stroke-color: $theme-blue;
     -webkit-text-stroke-width: to-rem(1);
@@ -35,19 +39,13 @@
       font-size: to-rem(48);
     }
   }
-  &__Content {
-    max-width: to-rem(1200);
-    padding: to-rem(20 10);
+  &_Content {
+    height: 100vh;
+    padding: to-rem(24 33);
     width: 100%;
     grid-area: content;
-    display: flex;
-    align-items: center;
-    p {
-      font-size: to-rem(16);
-      margin-bottom: to-rem(20);
-      @include md() {
-        font-size: to-rem(22);
-      }
+    @include md() {
+      padding: to-rem(48 66);
     }
   }
 }

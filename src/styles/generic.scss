@@ -18,9 +18,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   margin: 0 auto;
-  background-color: $white;
+  background-color: $bg-cream;
   color: $theme-blue;
 }
 
@@ -35,29 +35,6 @@ body {
   font-family: inherit;
   color: inherit;
   line-height: 1.5;
-}
-p {
-  line-height: 2;
-}
-
-.topBar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: to-em(3);
-  background: linear-gradient(90deg, #61dafb 0%, #b06ab3 100%);
-  z-index: 5;
-}
-
-.bgGradient {
-  width: fit-content;
-  padding: to-em(2);
-  background: linear-gradient(90deg, #61dafb 0%, #b06ab3 100%);
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
 }
 
 button {
@@ -89,22 +66,9 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-a,
-a:hover,
-a:focus,
-a:visited {
-  text-decoration: none;
-  color: $theme-red;
-  transition: all 0.2s ease-in-out;
-}
-
-a:hover {
-  background: $theme-blue-light;
-  padding: 1px;
-}
 
 blockquote {
   display: block;
