@@ -26,7 +26,7 @@ const PageLayout = ({ children }) => {
   return (
     <div className={styles.pageLayout}>
       <div className={styles.pageLayout_NameStrip_Wrapper}>
-        <h1 className={styles.pageLayout_NameStrip}>Work in Progress</h1>
+        {/* <h1 className={styles.pageLayout_NameStrip}>Work in Progress</h1> */}
       </div>
       <main className={styles.pageLayout_Content}>
         <Link to="/">

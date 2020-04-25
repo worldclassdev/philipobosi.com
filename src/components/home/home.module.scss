@@ -12,8 +12,13 @@
   }
 
   &_title {
-    font-size: to-rem(48);
+    font-size: to-rem(42);
     line-height: to-rem(64);
+
+
+    @include md() {
+      font-size: to-rem(48);
+    }
   }
 
   &_description {
