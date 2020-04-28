@@ -27,6 +27,7 @@ module.exports = async ({ graphql, actions }) => {
                 author {
                   name
                   bio
+                  date
                   profilePicture
                   social {
                     twitter
