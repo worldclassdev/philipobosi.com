@@ -9,7 +9,13 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: `content`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,6 +23,7 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -26,6 +33,16 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    `gatsby-transformer-yaml`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -44,4 +61,7 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  mapping: {
+    "MarkdownRemark.frontmatter.author": `AuthorYaml`,
+  },
 }

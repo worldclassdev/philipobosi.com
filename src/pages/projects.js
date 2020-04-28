@@ -5,7 +5,7 @@ import { PageLayout } from "../components/layouts"
 import React from "react"
 import SEO from "../components/seo"
 
-const AboutPage = () => (
+const ProjectsPage = () => (
   <PageLayout>
     <NavMenu />
     <section>
@@ -16,4 +16,4 @@ const AboutPage = () => (
   </PageLayout>
 )
 
-export default AboutPage
+export default ProjectsPage

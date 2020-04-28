@@ -15,7 +15,6 @@
     font-size: to-rem(42);
     line-height: to-rem(64);
 
-
     @include md() {
       font-size: to-rem(48);
     }
@@ -89,6 +88,12 @@
         border: 2px solid $bg-cream;
       }
       cursor: pointer;
+    }
+
+    &_activeLink {
+      background-color: $theme-blue !important;
+      color: $white;
+      border: 2px solid $bg-cream !important;
     }
   }
   hr {

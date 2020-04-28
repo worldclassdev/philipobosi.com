@@ -1,7 +1,9 @@
 /**
- * Implement Gatsby's Node APIs in this file.
+ * Getsby Node API Implementation
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+exports.onCreateWebpackConfig = require("./gatsby/onCreateWebpackConfig")
+exports.createPages = require("./gatsby/createPages")
+exports.onCreateNode = require("./gatsby/onCreateNode")

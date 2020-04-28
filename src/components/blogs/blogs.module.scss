@@ -1,0 +1,18 @@
+@import "../../styles/breakpoint";
+@import "../../styles/converter";
+@import "../../styles/variables";
+
+.blogsGrid {
+  margin: to-rem(50 0);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: to-rem(50);
+
+  @include md() {
+    grid-template-columns: repeat(auto-fill, minmax(to-rem(350), 1fr));
+  }
+}
+
+.blogsGridPost {
+  line-height: 2 !important;
+}
