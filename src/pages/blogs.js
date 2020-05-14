@@ -1,6 +1,7 @@
+import { Link, graphql } from "gatsby"
+
 import { BlogsGrid } from "../components/blogs"
 import Image from "../components/image"
-import { Link } from "gatsby"
 import { NavMenu } from "../components/home"
 import { PageLayout } from "../components/layouts"
 import React from "react"
