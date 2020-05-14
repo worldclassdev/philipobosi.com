@@ -24,10 +24,10 @@ module.exports = async ({ graphql, actions }) => {
               frontmatter {
                 title
                 permalink
+                date
                 author {
                   name
                   bio
-                  date
                   profilePicture
                   social {
                     twitter
