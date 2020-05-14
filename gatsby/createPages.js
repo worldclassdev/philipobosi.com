@@ -1,5 +1,4 @@
 const path = require(`path`)
-const { getNewestContent } = require("./graphQl")
 
 module.exports = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
