@@ -12,16 +12,34 @@
     padding: to-rem(0 25);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background: $white;
     border-bottom: 1px solid #ececec;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
     @include md() {
       padding: to-rem(0 50);
+    }
+
+    &_menuIcon {
+      color: $theme-primary;
+      border-radius: 50%;
+      height: to-rem(40);
+      width: to-rem(40);
+      padding: to-rem(10);
+      cursor: pointer;
+      transition: all 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      &:hover {
+        background: $theme-light;
+      }
     }
   }
   &_Content {
     height: 100vh;
     width: 100%;
     grid-area: content;
+    margin-top: to-rem(70);
     @include md() {
       display: grid;
       grid-template-columns: to-rem(400) 1fr;

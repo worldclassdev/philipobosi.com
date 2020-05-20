@@ -8,6 +8,7 @@
 import { Link, graphql, useStaticQuery } from "gatsby"
 
 import { LogoIcon } from "../../assets/svgs"
+import { Menu } from "react-feather"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from "./layouts.module.scss"
@@ -26,10 +27,10 @@ const PageLayout = ({ children }) => {
   return (
     <div className={styles.pageLayout}>
       <div className={styles.pageLayout_navBar}>
-        {" "}
         <Link to="/">
           <LogoIcon className={styles.pageLayout_Content_logo} />
         </Link>
+        <Menu className={styles.pageLayout_navBar_menuIcon} />
       </div>
       <main className={styles.pageLayout_Content}>
         <div></div>
