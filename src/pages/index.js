@@ -1,11 +1,11 @@
-import { Link, graphql } from "gatsby"
-
 import { BlogsGrid } from "../components/blogs"
-import Image from "../components/image"
-import { NavMenu } from "../components/home"
+// import Image from "../components/image"
+// import { NavMenu } from "../components/home"
 import { PageLayout } from "../components/layouts"
 import React from "react"
-import SEO from "../components/seo"
+import { graphql } from "gatsby"
+
+// import SEO from "../components/seo"
 
 const BlogsPage = ({ data }) => {
   const blogPosts = data.allMarkdownRemark.edges

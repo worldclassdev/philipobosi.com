@@ -1,9 +1,9 @@
-import Image from "../components/image"
-import { Link } from "gatsby"
+// import Image from "../components/image"
+// import { Link } from "gatsby"
 import { NavMenu } from "../components/home"
 import { PageLayout } from "../components/layouts"
 import React from "react"
-import SEO from "../components/seo"
+// import SEO from "../components/seo"
 
 const CoursesPage = () => (
   <PageLayout>

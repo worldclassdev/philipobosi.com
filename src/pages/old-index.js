@@ -1,10 +1,11 @@
-import { Announcement, HeroCaption, NavMenu } from "../components/home"
+import { HeroCaption, NavMenu } from "../components/home"
 
-import Image from "../components/image"
-import { Link } from "gatsby"
+// import Image from "../components/image"
+// import { Link } from "gatsby"
 import { PageLayout } from "../components/layouts"
 import React from "react"
-import SEO from "../components/seo"
+
+// import SEO from "../components/seo"
 
 const IndexPage = () => (
   <PageLayout>
