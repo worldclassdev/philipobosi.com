@@ -12,8 +12,9 @@ module.exports = async ({ graphql, actions }) => {
 
   const blogPostTemplate = resolve(
     __dirname,
-    "../src/templates/content/Blogpost.js"
+    "../src/templates/content/BlogPost.js"
   )
+  
   const result = await graphql(
     `
       {
