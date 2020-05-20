@@ -5,8 +5,8 @@ import styles from "./blogs.module.scss"
 const BlogsGrid = ({ blogPosts }) => {
   return (
     <section className={styles.blogsGrid}>
-      {blogPosts.map(({ node }) => {
-        return <BlogsGridPost post={node} />
+      {blogPosts.map(({ node }, index) => {
+        return <BlogsGridPost post={node} key={node.fields.slug} />
       })}
     </section>
   )

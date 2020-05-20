@@ -13,9 +13,9 @@ const BlogsGridPost = ({ post }) => {
       <h2>{title}</h2>
       <h6>March 30, 2019</h6>
       <p>{excerpt}</p>
-      <Link to={slug} style={{ textDecoration: "underline" }}>
+      {/* <Link to={slug} style={{ textDecoration: "underline" }}>
         Read more
-      </Link>
+      </Link> */}
     </Link>
   )
 }
