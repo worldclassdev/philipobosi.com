@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import styles from "./blogs.module.scss"
 
 const BlogsGridPost = ({ post }) => {
   const {
@@ -8,7 +9,7 @@ const BlogsGridPost = ({ post }) => {
     fields: { slug },
   } = post
   return (
-    <Link to={slug}>
+    <Link className={styles.blogsGridPost} to={slug}>
       <h2>{title}</h2>
       <h6>March 30, 2019</h6>
       <p>{excerpt}</p>

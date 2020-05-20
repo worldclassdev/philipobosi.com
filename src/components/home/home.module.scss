@@ -7,10 +7,6 @@
   margin-top: to-rem(120);
   max-width: to-rem(700);
 
-  @include md() {
-    margin-top: to-rem(170);
-  }
-
   &_title {
     font-size: to-rem(42);
     line-height: to-rem(64);
@@ -38,24 +34,27 @@
       svg {
         width: to-rem(30);
         height: to-rem(30);
+        fill: $theme-light;
       }
     }
   }
 }
 
 .navMenu {
-  margin-top: to-rem(88);
+  display: none;
+  margin-top: to-rem(60);
   @include md() {
-    margin-top: to-rem(170);
+    display: block;
+    // margin-top: to-rem(170);
   }
   &_nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     list-style: none;
-    border: 1px solid $theme-blue-light;
+    border: 1px solid $theme-light;
     @include md() {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       flex-direction: row;
       height: to-rem(56);
     }
@@ -67,38 +66,38 @@
       align-items: center;
       font-size: to-rem(18);
       padding-left: to-rem(20);
-      background-color: $bg-cream;
+      background-color: $theme-primary;
 
       &:not(:first-child) {
-        border-top: 1px solid $theme-blue-light;
+        border-top: 1px solid $theme-light;
       }
 
       @include md() {
         width: 25%;
         height: 100%;
         &:not(:first-child) {
-          border-left: 1px solid $theme-blue-light;
+          border-left: 1px solid $theme-light;
           border-top: 0;
         }
       }
 
       &:hover {
-        background-color: $theme-blue;
+        background-color: $theme-primary;
         color: $white;
-        border: 2px solid $bg-cream;
+        border: 2px solid $theme-secondary;
       }
       cursor: pointer;
     }
 
     &_activeLink {
-      background-color: $theme-blue !important;
+      background-color: $theme-primary !important;
       color: $white;
-      border: 2px solid $bg-cream !important;
+      border: 2px solid $theme-secondary !important;
     }
   }
   hr {
     position: absolute;
-    border-color: $theme-blue-light;
+    border-color: $theme-light;
     left: 0;
     top: 50;
     width: 100%;

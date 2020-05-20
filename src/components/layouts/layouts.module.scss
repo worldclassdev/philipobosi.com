@@ -6,46 +6,29 @@
   height: 100vh;
   transition: all 0.2s ease-in-out;
   width: 100%;
-  @include md() {
-    display: grid;
-    grid-template-areas: "strip content";
-    gap: 0;
-    grid-template-columns: to-rem(120) 1fr;
-  }
 
-  &_NameStrip_Wrapper {
-    grid-area: strip;
+  &_navBar {
+    height: to-rem(70);
+    padding: to-rem(0 25);
     display: flex;
     align-items: center;
-    position: fixed;
-    height: 100vh;
-    width: to-rem(0);
-    z-index: -1;
-    border-right: 1px solid $theme-blue-light;
-    @include md() {
-      width: 120px;
-    }
-  }
+    border-bottom: 1px solid #ececec;
 
-  &_NameStrip {
-    font-size: to-rem(36);
-    -webkit-text-stroke-color: $theme-blue;
-    -webkit-text-stroke-width: to-rem(1);
-    color: transparent;
-    white-space: nowrap;
-    writing-mode: vertical-lr;
-    margin: auto;
     @include md() {
-      font-size: to-rem(48);
+      padding: to-rem(0 50);
     }
   }
   &_Content {
     height: 100vh;
-    padding: to-rem(24 33);
     width: 100%;
     grid-area: content;
     @include md() {
-      padding: to-rem(48 66);
+      display: grid;
+      grid-template-columns: to-rem(400) 1fr;
+    }
+
+    &_logo {
+      fill: $theme-light;
     }
   }
 }

@@ -3,9 +3,11 @@
 @import "../../styles/variables";
 
 .blogPost {
-  padding: to-em(60 0);
+  padding: to-rem(40 25);
+  transition: all 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
-  @include lg() {
+  @include md() {
+    padding: to-rem(80 50);
     height: 100%;
     // margin-left: auto;
     // margin-right: auto;
@@ -17,14 +19,15 @@
       "content"
       "footer";
   }
+
   &__Article {
     // padding: to-em(30);
     line-height: to-em(25) !important;
-    @include lg {
+    @include md() {
       grid-area: content;
-      max-width: to-em(900);
+      max-width: to-em(800);
       // padding: to-em(50 80);
-      // margin: auto;
+      margin: auto;
     }
     h1,
     h2,
@@ -66,7 +69,7 @@
       // border-bottom: 1px solid $light-black;
     }
     &__Footer {
-      @include lg() {
+      @include md() {
         grid-area: footer;
         display: flex;
         flex-direction: column;
@@ -76,14 +79,14 @@
   }
 
   &__Nav {
-    @include lg() {
+    @include md() {
       grid-area: nav;
       display: flex;
       flex-direction: column;
       position: sticky;
       top: to-em(30);
       height: 100vh;
-      border-left: 1px solid $light-black;
+      border-left: 1px solid $theme-light;
     }
   }
 }

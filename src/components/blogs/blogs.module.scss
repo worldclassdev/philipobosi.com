@@ -3,16 +3,41 @@
 @import "../../styles/variables";
 
 .blogsGrid {
-  margin: to-rem(50 0);
   display: grid;
   grid-template-columns: 1fr;
-  gap: to-rem(50);
 
   @include md() {
-    grid-template-columns: repeat(auto-fill, minmax(to-rem(350), 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(to-rem(350), 1fr));
+    // grid-template-rows: 1fr;
   }
 }
 
 .blogsGridPost {
   line-height: 2 !important;
+  border: 1px solid #ececec;
+  padding: to-rem(40 25);
+  transition: all 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+  @include md() {
+    padding: to-rem(80 50);
+  }
+  &:hover {
+    background: $theme-primary;
+    color: $white;
+  }
+  & > * {
+    &:not(:first-child) {
+      margin-top: to-rem(10);
+    }
+  }
 }
+
+// @-webkit-keyframes placeholderShimmer {
+//   0% {
+//     background-position: -468px 0;
+//   }
+
+//   100% {
+//     background-position: 468px 0;
+//   }
+// }

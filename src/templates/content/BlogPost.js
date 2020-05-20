@@ -17,7 +17,6 @@ class BlogPost extends React.Component {
 
     return (
       <PageLayout>
-        <NavMenu />
         <section
           location={this.props.location}
           className={styles.blogPost}

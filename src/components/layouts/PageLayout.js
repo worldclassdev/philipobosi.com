@@ -7,7 +7,7 @@
 
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import { InsigniaIcon } from "../../assets/svgs"
+import { LogoIcon } from "../../assets/svgs"
 import PropTypes from "prop-types"
 import React from "react"
 import styles from "./layouts.module.scss"
@@ -25,13 +25,14 @@ const PageLayout = ({ children }) => {
 
   return (
     <div className={styles.pageLayout}>
-      <div className={styles.pageLayout_NameStrip_Wrapper}>
-        {/* <h1 className={styles.pageLayout_NameStrip}>Work in Progress</h1> */}
+      <div className={styles.pageLayout_navBar}>
+        {" "}
+        <Link to="/">
+          <LogoIcon className={styles.pageLayout_Content_logo} />
+        </Link>
       </div>
       <main className={styles.pageLayout_Content}>
-        <Link to="/">
-          <InsigniaIcon />
-        </Link>
+        <div></div>
         {children}
       </main>
     </div>
