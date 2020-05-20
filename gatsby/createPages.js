@@ -1,4 +1,4 @@
-const path = require(`path`)
+const { resolve } = require("path")
 
 module.exports = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
@@ -10,7 +10,10 @@ module.exports = async ({ graphql, actions }) => {
     toPath: "/",
   })
 
-  const blogPostTemplate = path.resolve(`./src/templates/content/Blogpost.js`)
+  const blogPostTemplate = resolve(
+    __dirname,
+    "../src/templates/content/Blogpost.js"
+  )
   const result = await graphql(
     `
       {
