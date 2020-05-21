@@ -8,8 +8,6 @@ author: worldclassdev
 
 > This article was originally published on [LogRocket](https://blog.logrocket.com/rate-limiting-node-js/)
 
-## Introduction
-
 Rate limiting is a very powerful feature for securing backend APIs from malicious attack as well as for handling unwanted streams of requests from users. In general terms, it allows us to control the rate at which user requests are processed by our server.
 
 In this article, we will examine the different approaches to implementing rate limiting in theory, as well as the pros and cons of each. We will also get practical by implementing a selected approach, i.e., the most optimal for our use case in Node.js.
