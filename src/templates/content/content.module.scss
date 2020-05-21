@@ -58,6 +58,10 @@
       margin: 0;
     }
 
+    a {
+      text-decoration: underline;
+    }
+
     blockquote {
       display: block;
       margin-block-start: 0em;
@@ -73,7 +77,6 @@
       margin-bottom: 30px;
     }
 
-    
     pre {
       margin: to-em(30 0);
       padding: to-em(20);
