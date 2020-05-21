@@ -33,7 +33,16 @@ const PageLayout = ({ children }) => {
         <Menu className={styles.pageLayout_navBar_menuIcon} />
       </div>
       <main className={styles.pageLayout_Content}>
-        <div></div>
+        <div>
+          {/* <h1 className={styles.heroCaption_title}>Hey there, I’m Philip! </h1>
+          <p className={styles.heroCaption_description}>
+            I’m a Frontend Engineer(5+ years) and Product Designer(2+years)
+            based in Lagos, Nigeria. I love to ideate and solve problems
+            intuitively and simplistically through fucntional and detailed
+            interfaces. I also love to sing covers, make music and try new
+            things.
+          </p> */}
+        </div>
         {children}
       </main>
     </div>

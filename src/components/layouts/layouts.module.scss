@@ -18,6 +18,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 5;
     @include md() {
       padding: to-rem(0 50);
     }
@@ -35,14 +36,20 @@
       }
     }
   }
+
   &_Content {
     height: 100vh;
     width: 100%;
     grid-area: content;
     margin-top: to-rem(70);
+
     @include md() {
       display: grid;
       grid-template-columns: to-rem(400) 1fr;
+      & > *:first-child {
+        border-right: 1px solid $theme-light;
+        height: 100%;
+      }
     }
 
     &_logo {

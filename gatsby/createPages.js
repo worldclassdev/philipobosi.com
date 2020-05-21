@@ -14,7 +14,7 @@ module.exports = async ({ graphql, actions }) => {
     __dirname,
     "../src/templates/content/BlogPost.js"
   )
-  
+
   const result = await graphql(
     `
       {
@@ -54,16 +54,16 @@ module.exports = async ({ graphql, actions }) => {
     const slug = post.node.fields.slug
     const permalink = post.node.frontmatter.permalink
     let template
-    if (slug.includes("blogs/")) {
-      if (slug.includes("blogs/")) {
-        template = blogPostTemplate
-      }
+
+    if (slug.includes("blogs/") || slug.includes("node/")) {
+      template = blogPostTemplate
     }
+
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
     console.log(slug)
     createPage({
-      path: `${slug}`,
+      path: `${permalink}`,
       component: template,
       context: {
         slug,

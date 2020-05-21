@@ -14,9 +14,10 @@
 
 .blogsGridPost {
   line-height: 2 !important;
-  border: 1px solid #ececec;
+  border: 1px solid $theme-light;
   padding: to-rem(40 25);
   transition: all 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  height: fit-content;
 
   @include md() {
     padding: to-rem(80 50);

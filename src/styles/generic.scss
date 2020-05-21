@@ -69,21 +69,6 @@ h6 {
   font-weight: 600;
 }
 
-blockquote {
-  display: block;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0;
-  margin-inline-end: 0px;
-  background-color: rgba(97, 218, 251, 0.3);
-  color: $white;
-  border-left-color: $theme-light;
-  border-left-width: 9px;
-  border-left-style: solid;
-  padding: to-em(10 20);
-  margin-bottom: 30px;
-}
-
 img {
   width: 100%;
 }

@@ -5,13 +5,13 @@ import styles from "./blogs.module.scss"
 const BlogsGridPost = ({ post }) => {
   const {
     excerpt,
-    frontmatter: { title },
+    frontmatter: { title, date, permalink },
     fields: { slug },
   } = post
   return (
-    <Link className={styles.blogsGridPost} to={slug}>
+    <Link className={styles.blogsGridPost} to={permalink}>
       <h2>{title}</h2>
-      <h6>March 30, 2019</h6>
+      <h6>{date}</h6>
       <p>{excerpt}</p>
       {/* <Link to={slug} style={{ textDecoration: "underline" }}>
         Read more

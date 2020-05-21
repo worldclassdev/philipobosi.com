@@ -22,10 +22,13 @@ export default BlogsPage
 
 export const pageQuery = graphql`
   query AllBlogPostsPageQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
+    ) {
       edges {
         node {
-          excerpt(pruneLength: 150)
+          excerpt(pruneLength: 200)
           fields {
             slug
           }
