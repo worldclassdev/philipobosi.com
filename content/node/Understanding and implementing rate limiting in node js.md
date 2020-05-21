@@ -1,7 +1,7 @@
 ---
 title: Understanding and implementing rate limiting in Node JS
 date: "2020-05-20"
-description: "Hello World"
+description: "An examination of various rate limiting algorithms and their applications."
 permalink: "node-rate-limiting"
 author: worldclassdev
 ---
