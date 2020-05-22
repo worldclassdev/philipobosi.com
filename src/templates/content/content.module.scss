@@ -45,6 +45,9 @@
       font-weight: 500;
       font-size: to-rem(16);
     }
+    code {
+      white-space: break-spaces;
+    }
     ul,
     ol {
       margin-block-start: 1em;
