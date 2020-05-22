@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Software Engineer && Product Designer`,
     author: `Philip Obosi`,
-    description: `A canvas for my soul.`,
+    description: `A canvas for my work and soul.`,
     siteUrl: `https://philipobosi.com/`,
     social: {
       twitter: `worldclassdev`,
@@ -36,10 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-smartypants`,
-        ],
+        plugins: [`gatsby-remark-prismjs`, `gatsby-remark-smartypants`],
       },
     },
     `gatsby-transformer-yaml`,
@@ -57,6 +54,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
