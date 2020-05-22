@@ -4,8 +4,9 @@
 
 .blogsGrid {
   display: grid;
-  grid-template-columns: 1fr;
-
+  grid-template-columns: repeat(1fr);
+  gap: 0;
+  width: 100%;
   @include md() {
     // grid-template-columns: repeat(auto-fit, minmax(to-rem(350), 1fr));
     // grid-template-rows: 1fr;
@@ -13,11 +14,13 @@
 }
 
 .blogsGridPost {
+  display: block;
   line-height: 2 !important;
   border: 1px solid $theme-light;
   padding: to-rem(40 25);
   transition: all 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   height: fit-content;
+  width: 100%;
 
   @include md() {
     padding: to-rem(80 50);
@@ -28,7 +31,7 @@
   }
   & > * {
     &:not(:first-child) {
-      margin-top: to-rem(10);
+      margin-top: to-rem(10) !important;
     }
   }
 }

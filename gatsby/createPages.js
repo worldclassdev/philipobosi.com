@@ -55,7 +55,14 @@ module.exports = async ({ graphql, actions }) => {
     const permalink = post.node.frontmatter.permalink
     let template
 
-    if (slug.includes("blogs/") || slug.includes("node/")) {
+    if (
+      slug.includes("blogs/") ||
+      slug.includes("node/") ||
+      slug.includes("react/") ||
+      slug.includes("javascript/") ||
+      slug.includes("random/") ||
+      slug.includes("gatsby/")
+    ) {
       template = blogPostTemplate
     }
 
