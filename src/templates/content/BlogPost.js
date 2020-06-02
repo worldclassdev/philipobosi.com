@@ -1,6 +1,6 @@
 // import { NavMenu } from "../../components/home"
 // import Bio from "../../components/bio"
-import PageLayout from "../../components/layouts/PageLayout"
+import { PageLayout } from "../../layouts"
 import React from "react"
 import SEO from "../../components/seo"
 import { graphql } from "gatsby"

@@ -34,7 +34,7 @@
       svg {
         width: to-rem(30);
         height: to-rem(30);
-        fill: $theme-light;
+        fill: $light-bg;
       }
     }
   }
@@ -50,7 +50,7 @@
   &_nav {
     width: 100%;
     list-style: none;
-    border: 1px solid $theme-light;
+    border: 1px solid $light-bg;
     @include md() {
       display: flex;
       flex-direction: column;
@@ -69,14 +69,14 @@
       background-color: $theme-primary;
 
       &:not(:first-child) {
-        border-top: 1px solid $theme-light;
+        border-top: 1px solid $light-bg;
       }
 
       @include md() {
         width: 25%;
         height: 100%;
         &:not(:first-child) {
-          border-left: 1px solid $theme-light;
+          border-left: 1px solid $light-bg;
           border-top: 0;
         }
       }
@@ -97,7 +97,7 @@
   }
   hr {
     position: absolute;
-    border-color: $theme-light;
+    border-color: $light-bg;
     left: 0;
     top: 50;
     width: 100%;

@@ -1,0 +1,60 @@
+@import "../styles/variables";
+@import "../styles/converter";
+@import "../styles/breakpoint";
+
+.navBar {
+  height: to-rem(70);
+  padding: to-rem(0 25);
+  display: flex;
+  align-items: center;
+  background: $white;
+  // border-bottom: 1px solid #ececec;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  border-top: solid to-rem(10) $theme-secondary;
+  @include md() {
+    padding: to-rem(65 72);
+    justify-content: space-between;
+  }
+
+  &_logo {
+  }
+
+  &_nav {
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+    &_link {
+      &:not(:first-child) {
+        margin-left: to-rem(32);
+      }
+    }
+  }
+}
+
+.pageLayout {
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+
+  &_Content {
+    width: 100%;
+    grid-area: content;
+    margin-top: to-rem(140);
+    padding: to-rem(0 20);
+
+    // @include md() {
+    //   display: grid;
+    //   grid-template-columns: to-rem(400) 1fr;
+    //   & > *:first-child {
+    //     border-right: 1px solid $light-bg;
+    //     height: 100%;
+    //   }
+    // }
+
+    &_logo {
+      fill: $light-bg;
+    }
+  }
+}

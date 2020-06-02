@@ -10,6 +10,13 @@ module.exports = async ({ graphql, actions }) => {
     toPath: "/",
   })
 
+  createRedirect({
+    fromPath: `/`,
+    toPath: `/about`,
+    redirectInBrowser: true,
+    force: true,
+  })
+
   const blogPostTemplate = resolve(
     __dirname,
     "../src/templates/content/BlogPost.js"

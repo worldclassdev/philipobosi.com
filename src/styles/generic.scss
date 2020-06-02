@@ -6,8 +6,11 @@
 @import "typography";
 
 html {
-  // font-size: 95%;
+  font-size: 90%;
   scroll-behavior: smooth;
+  @include md() {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -18,7 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   font-style: normal;
-  font-weight: 500;
+  font-weight: normal;
   margin: 0 auto;
   color: $theme-secondary;
   background-color: $white;
@@ -66,9 +69,13 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 img {
   width: 100%;
+}
+
+p {
+  // line-height: 2;
 }

@@ -1,4 +1,4 @@
-import { PageLayout } from "../components/layouts"
+import { PageLayout } from "../layouts"
 import React from "react"
 import SEO from "../components/seo"
 

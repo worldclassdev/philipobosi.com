@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+@import "../../styles/converter";
+@import "../../styles/breakpoint";
+
+.about {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: to-rem(900);
+  margin: auto;
+  text-align: center;
+
+  &_header {
+    width: 100%;
+    max-width: to-rem(600);
+
+    &_image {
+      height: to-rem(150);
+      width: to-rem(150);
+      background-color: $light-bg;
+      margin: auto;
+      border-radius: to-rem(5);
+    }
+
+    &_title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: to-rem(26);
+      margin-top: to-rem(48);
+    }
+    &_description {
+      font-size: to-rem(16);
+      margin-top: to-rem(16);
+    }
+    &_email {
+      display: block;
+      font-size: to-rem(16);
+      margin-top: to-rem(48);
+      text-decoration: underline;
+      text-decoration-color: $theme-primary;
+      transition: 0.9s all cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+  }
+
+  &_content {
+    margin-top: to-rem(100);
+  }
+}
