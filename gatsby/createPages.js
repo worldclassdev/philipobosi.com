@@ -13,6 +13,8 @@ module.exports = async ({ graphql, actions }) => {
   createRedirect({
     fromPath: `/`,
     toPath: `/about`,
+    // isPermanent: true,
+    statusCode: 200,
     redirectInBrowser: true,
     force: true,
   })
