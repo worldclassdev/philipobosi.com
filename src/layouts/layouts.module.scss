@@ -13,7 +13,7 @@
   top: 0;
   width: 100%;
   z-index: 5;
-  border-top: solid to-rem(10) $theme-secondary;
+  border-top: solid to-rem(5) $theme-primary;
   @include md() {
     padding: to-rem(65 72);
     justify-content: space-between;
@@ -27,6 +27,7 @@
     display: flex;
     align-items: center;
     &_link {
+      font-size: to-rem(16);
       &:not(:first-child) {
         margin-left: to-rem(32);
       }
