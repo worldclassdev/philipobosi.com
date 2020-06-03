@@ -6,12 +6,16 @@
   min-height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
   width: 100%;
   max-width: to-rem(900);
-  margin: auto;
-  text-align: center;
+  // margin: auto;
+  // text-align: center;
+  padding: to-rem(0 20);
+  @include md() {
+    padding: to-rem(65 72);
+  }
 
   &_header {
     width: 100%;
@@ -21,7 +25,7 @@
       height: to-rem(150);
       width: to-rem(150);
       background-color: $light-bg;
-      margin: auto;
+      // margin: auto;
       border-radius: to-rem(5);
     }
 
