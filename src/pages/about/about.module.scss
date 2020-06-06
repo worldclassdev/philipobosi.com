@@ -6,50 +6,56 @@
   min-height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
-  // align-items: center;
+  font-size: to-rem(18);
+  text-align: center;
   justify-content: center;
   width: 100%;
-  max-width: to-rem(900);
-  // margin: auto;
-  // text-align: center;
+  max-width: to-rem(1200);
   padding: to-rem(0 20);
   @include md() {
     padding: to-rem(65 72);
+    margin: auto;
   }
 
   &_header {
     width: 100%;
     max-width: to-rem(600);
+    margin: to-rem(100) auto to-rem(50);
 
     &_image {
       height: to-rem(150);
       width: to-rem(150);
       background-color: $light-bg;
-      // margin: auto;
+      margin: auto;
       border-radius: to-rem(5);
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        transform: rotateZ(10deg);
+      }
     }
 
     &_title {
       font-style: normal;
       font-weight: 500;
-      font-size: to-rem(26);
+      font-size: to-rem(30);
       margin-top: to-rem(48);
     }
     &_description {
-      font-size: to-rem(16);
       margin-top: to-rem(16);
     }
     &_email {
       display: block;
-      font-size: to-rem(16);
+      font-size: to-rem(20);
       margin-top: to-rem(48);
-      text-decoration: underline;
-      text-decoration-color: $theme-primary;
-      transition: 0.9s all cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
   }
 
   &_content {
-    margin-top: to-rem(100);
+    p {
+      margin-top: to-rem(40);
+    }
   }
 }

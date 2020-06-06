@@ -51,11 +51,13 @@ button {
 }
 
 a {
-  text-decoration: none;
   font-size: inherit;
   font-weight: inherit;
   font-style: inherit;
   color: inherit;
+  text-decoration: underline;
+  text-decoration-color: $theme-primary;
+  transition: 0.9s all cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
   &:hover {
     text-decoration: none;
@@ -78,4 +80,8 @@ img {
 
 p {
   // line-height: 2;
+}
+
+h1 {
+  font-size: to-rem(48);
 }
