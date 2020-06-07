@@ -23,8 +23,7 @@ body {
   font-style: normal;
   font-weight: normal;
   margin: 0 auto;
-  color: $theme-secondary;
-  background-color: $white;
+  color: $theme-secondary-light;
 }
 
 *,
@@ -54,7 +53,7 @@ a {
   font-size: inherit;
   font-weight: inherit;
   font-style: inherit;
-  color: inherit;
+  color: $theme-secondary;
   text-decoration: underline;
   text-decoration-color: $theme-primary;
   transition: 0.9s all cubic-bezier(0.455, 0.03, 0.515, 0.955);

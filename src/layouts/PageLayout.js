@@ -11,6 +11,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import styles from "./layouts.module.scss"
 import NavBar from "./NavBar"
+import Footer from "./Footer"
 
 const PageLayout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ const PageLayout = ({ children }) => {
     <div className={styles.pageLayout}>
       <NavBar />
       <main className={styles.pageLayout_Content}>{children}</main>
+      <Footer />
     </div>
   )
 }

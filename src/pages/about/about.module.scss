@@ -3,34 +3,36 @@
 @import "../../styles/breakpoint";
 
 .about {
-  min-height: calc(100vh - 140px);
   display: flex;
   flex-direction: column;
   font-size: to-rem(18);
-  text-align: center;
   justify-content: center;
   width: 100%;
-  max-width: to-rem(1200);
+  max-width: to-rem(1024);
   padding: to-rem(0 20);
   @include md() {
     padding: to-rem(65 72);
-    margin: auto;
+    // margin: auto;
   }
 
   &_header {
     width: 100%;
-    max-width: to-rem(600);
-    margin: to-rem(100) auto 0;
 
     &_image {
-      height: to-rem(150);
-      width: to-rem(150);
+      height: to-rem(180);
+      width: to-rem(180);
       background-color: $light-bg;
-      margin: auto;
+      margin: to-rem(50) auto auto;
       border-radius: to-rem(5);
       object-fit: cover;
       transition: transform 0.3s ease-in-out;
       cursor: pointer;
+
+      @include md() {
+        height: to-rem(250);
+        width: to-rem(250);
+        margin: to-rem(0) auto;
+      }
 
       &:hover {
         transform: rotateZ(10deg);
@@ -48,7 +50,7 @@
     }
     &_email {
       display: block;
-      font-size: to-rem(20);
+
       margin-top: to-rem(48);
     }
   }

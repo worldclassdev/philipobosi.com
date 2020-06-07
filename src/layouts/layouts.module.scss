@@ -3,19 +3,20 @@
 @import "../styles/breakpoint";
 
 .navBar {
-  height: to-rem(70);
-  padding: to-rem(0 25);
+  padding: to-rem(20 25);
   display: flex;
   align-items: center;
   background: $white;
-  // border-bottom: 1px solid #ececec;
+  color: $theme-secondary;
+  border-bottom: 1px solid #ececec;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 5;
   border-top: solid to-rem(5) $theme-primary;
+
   @include md() {
-    padding: to-rem(65 72);
+    padding: to-rem(20 72);
     justify-content: space-between;
   }
 
@@ -28,6 +29,13 @@
     align-items: center;
     &_link {
       font-size: to-rem(16);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $theme-primary;
+      }
       &:not(:first-child) {
         margin-left: to-rem(32);
       }
@@ -36,7 +44,6 @@
 }
 
 .pageLayout {
-  transition: all 0.2s ease-in-out;
   width: 100%;
 
   &_Content {
